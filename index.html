@@ -8,16 +8,16 @@
         <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   </head>
   <body>
-    <h1 id="title">Locais | Локации</h1>
-    <main class="center">
+    <h1 id="title">Gerador de Senhas</h1>
+    <main class="principal">
       <form>
-      <label class="label-text block"> Digite a cidade a monitorar: </label>
-        <input type="text" id="data-input" placeholder="Digite a localização a cidade" required class="block input"> 
+      <label class="label-text block"> Digite a senha: </label>
+        <input type="text" id="data-input" placeholder="Digite a senha" required class="block input"> 
       <label class="label-text"> Offset: </label> <input id=offset type="number" required class="block input"> 
-      <button type="submit" id="encode" class="button">Codificar</button>
-      <button type="submit" id="decode" class="button">Decodificar</button>
-      <button type="reset" id="clean-button"> Limpar</button>
-        <h2 id="results" class="block" ></h2>
+      <button type="button" id="botao-encode" class="button">Codificar</button>
+      <button type="button" id="botao-decode" class="button">Decodificar</button>
+      <button type="reset" id="botao-limpar">Limpar</button>
+        <h2 id="resultado" class="block" ></h2>
         </form>
     </main>
     <script src="index.js" type="module"></script> 
