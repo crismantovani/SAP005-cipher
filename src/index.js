@@ -1,37 +1,31 @@
+//Móludos do js | Importando o import cipher.js;
 import cipher from './cipher.js';
 
-const botaoencode = document.getElementById("encode");
-    botaoencode.addEventListener('click', pegarvalores);
+//DOM: conectando o HTML com o JS
 
-    function pegarvalores () {
-        const input = document.getElementById("data-input").value;
-        const offset = document.getElementById("offset").value;
-        const inputStr = String(input).toUpperCase();
-        const offsetNum = Number(offset);
-        const encode = function encode () {
+const getmensagemEntrada = document.getElementById('mensagemEntrada');
+const getoffset = document.getElementById('offset');
+const getTranslatedMessage = document.getElementById('resultado');
+const encryptButton = document.getElementById('encrypt-button');
+const decryptButton = document.getElementById('decrypt-button');
 
+//addEventListener = Age conforme interação do user
+//Botão Encriptar
 
-        };
-    
-}
+encryptButton.addEventListener('click', event => {
+    event.preventDefault();
+    const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
+    const offset = Number(getoffset.value);
+    const encryptedMessage = cipher.encode(offset, mensagemEntrada);
+    getTranslatedMessage.innerHTML = encryptedMessage;
+});
 
-const botaodecode = document.getElementById("decode")
-    botaodecode.addEventListener('click', pegarinput);
+//Botão de Desencriptar
 
-    function pegarinput() {
-        const input = document.getElementById("data-input").value;
-        const offset = document.getElementById("offset").value;
-        const inputStr = String(input).toUpperCase();
-        const offsetNum = Number(offset);
-        const decode = function decode() {
-
-
-        };
-
-    }
-
-
-
-    
-
-console.log(cipher);
+decryptButton.addEventListener('click', event => {
+    event.preventDefault();
+    const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
+    const offset = Number(getoffset.value);
+    const decryptedMessage = cipher.decode(offset, mensagemEntrada);
+    getTranslatedMessage.innerHTML = decryptedMessage;
+});
