@@ -6,13 +6,13 @@ import cipher from './cipher.js';
 const getmensagemEntrada = document.getElementById('mensagemEntrada');
 const getoffset = document.getElementById('offset');
 const getTranslatedMessage = document.getElementById('resultado');
-const encryptButton = document.getElementById('encrypt-button');
-const decryptButton = document.getElementById('decrypt-button');
+const botaoEncript = document.getElementById('botaoEncript');
+const botaoDecript = document.getElementById('botaoDecript');
 
 //addEventListener = Age conforme interação do user
 //Botão Encriptar
 
-encryptButton.addEventListener('click', event => {
+botaoEncript.addEventListener('click', event => {
     event.preventDefault();
     const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
     const offset = Number(getoffset.value);
@@ -22,7 +22,7 @@ encryptButton.addEventListener('click', event => {
 
 //Botão de Desencriptar
 
-decryptButton.addEventListener('click', event => {
+botaoDecript.addEventListener('click', event => {
     event.preventDefault();
     const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
     const offset = Number(getoffset.value);

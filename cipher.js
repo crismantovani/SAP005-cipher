@@ -8,10 +8,9 @@ const cipher = {
             for (const letter of mensagemEntrada) {
                 const letterCharCode = letter.charCodeAt();
                 const letterRealNumber = letterCharCode - 65;
-                const alphabetLetters = 26;
-                const newLetterCharCode = ((letterRealNumber + offset) % alphabetLetters) + 65;
+                const alfabeto = 26;
+                const newLetterCharCode = ((letterRealNumber + offset) % alfabeto) + 65;
                 const encryptedLetter = String.fromCharCode(newLetterCharCode);
-
                 finalMessage += encryptedLetter;
             }
             return finalMessage;
@@ -21,20 +20,19 @@ const cipher = {
     decode: function (offset, mensagemEntrada) {
         let finalMessage = "";
 
-        if (!offset, mensagemEntrada) {
+        if (!offset || !mensagemEntrada) {
             throw new TypeError();
-        } else{
+        } else {
             for (const letter of mensagemEntrada) {
                 const letterCharCode = letter.charCodeAt();
                 const letterRealNumber = letterCharCode + 65;
-                const alphabetLetters = 26;
-                const newLetterCharCode = ((letterRealNumber - offset) % alphabetLetters) + 65;
+                const alfabeto = 26;
+                const newLetterCharCode = ((letterRealNumber - offset) % alfabeto) + 65;
                 const encryptedLetter = String.fromCharCode(newLetterCharCode);
-
                 finalMessage =+ encryptedLetter;
             }
         }
-        return finalMessage;
+            return finalMessage;
         }
     };
 export default cipher;
