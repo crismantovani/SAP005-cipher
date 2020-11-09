@@ -8,10 +8,10 @@ const cipher = {
             throw new TypeError();
         } else {
             for (const letter of mensagemEntrada) {
-                const letterCharCode = letter.charCodeAt();
-                const letterRealNumber = letterCharCode - 65;
-                const newLetterCharCode = ((letterRealNumber + offset) % alfabeto) + 65;
-                const MensagemEncriptada = String.fromCharCode(newLetterCharCode);
+                let letterCharCode = letter.charCodeAt();
+                let letterRealNumber = letterCharCode - 65;
+                let newLetterCharCode = ((letterRealNumber + offset) % alfabeto) + 65;
+                let MensagemEncriptada = String.fromCharCode(newLetterCharCode);
                 finalMessage += MensagemEncriptada;
             
             }
@@ -26,10 +26,10 @@ const cipher = {
             throw new TypeError();
         } else {
             for (const letter of mensagemEntrada) {
-                const letterCharCode = letter.charCodeAt();
-                const letterRealNumber = letterCharCode + 65;               
-                const newLetterCharCode = ((letterRealNumber - offset) % alfabeto) + 65;
-                const MensagemEncriptada = String.fromCharCode(newLetterCharCode);
+                let letterCharCode = letter.charCodeAt();
+                let letterRealNumber = letterCharCode + 65;               
+                let newLetterCharCode = ((letterRealNumber - offset) % alfabeto) + 65;
+                let MensagemEncriptada = String.fromCharCode(newLetterCharCode);
                 finalMessage =+ MensagemEncriptada;
                 
             }
