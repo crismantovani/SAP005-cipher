@@ -10,8 +10,9 @@ const cipher = {
                 const letterRealNumber = letterCharCode - 65;
                 const alfabeto = 26;
                 const newLetterCharCode = ((letterRealNumber + offset) % alfabeto) + 65;
-                const encryptedLetter = String.fromCharCode(newLetterCharCode);
-                finalMessage += encryptedLetter;
+                const MensagemEncriptada = String.fromCharCode(newLetterCharCode);
+                finalMessage += MensagemEncriptada;
+            
             }
             return finalMessage;
         }
@@ -28,8 +29,9 @@ const cipher = {
                 const letterRealNumber = letterCharCode + 65;
                 const alfabeto = 26;
                 const newLetterCharCode = ((letterRealNumber - offset) % alfabeto) + 65;
-                const encryptedLetter = String.fromCharCode(newLetterCharCode);
-                finalMessage =+ encryptedLetter;
+                const MensagemEncriptada = String.fromCharCode(newLetterCharCode);
+                finalMessage =+ MensagemEncriptada;
+                
             }
         }
             return finalMessage;

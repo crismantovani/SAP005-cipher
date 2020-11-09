@@ -5,7 +5,7 @@ import cipher from './cipher.js';
 
 const getmensagemEntrada = document.getElementById('mensagemEntrada');
 const getoffset = document.getElementById('offset');
-const getTranslatedMessage = document.getElementById('resultado');
+const getresultado = document.getElementById('resultado');
 const botaoEncript = document.getElementById('botaoEncript');
 const botaoDecript = document.getElementById('botaoDecript');
 
@@ -16,8 +16,8 @@ botaoEncript.addEventListener('click', event => {
     event.preventDefault();
     const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
     const offset = Number(getoffset.value);
-    const encryptedMessage = cipher.encode(offset, mensagemEntrada);
-    getTranslatedMessage.innerHTML = encryptedMessage;
+    const MensagemEncriptada = cipher.encode(offset, mensagemEntrada);
+    getresultado.innerHTML = MensagemEncriptada;
 });
 
 //Botão de Desencriptar
@@ -26,6 +26,6 @@ botaoDecript.addEventListener('click', event => {
     event.preventDefault();
     const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
     const offset = Number(getoffset.value);
-    const decryptedMessage = cipher.decode(offset, mensagemEntrada);
-    getTranslatedMessage.innerHTML = decryptedMessage;
+    const MensagemEncriptada = cipher.decode(offset, mensagemEntrada);
+    getresultado.innerHTML = MensagemEncriptada;
 });
