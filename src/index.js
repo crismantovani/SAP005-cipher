@@ -14,9 +14,9 @@ const botaoDecript = document.getElementById('botaoDecript');
 
 botaoEncript.addEventListener('click', event => {
     event.preventDefault();
-    const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
-    const offset = Number(getoffset.value);
-    const MensagemEncriptada = cipher.encode(offset, mensagemEntrada);
+    let mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
+    let offset = Number(getoffset.value);
+    let MensagemEncriptada = cipher.encode(offset, mensagemEntrada);
     getresultado.innerHTML = MensagemEncriptada;
 });
 
@@ -24,8 +24,8 @@ botaoEncript.addEventListener('click', event => {
 
 botaoDecript.addEventListener('click', event => {
     event.preventDefault();
-    const mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
-    const offset = Number(getoffset.value);
-    const MensagemEncriptada = cipher.decode(offset, mensagemEntrada);
+    let mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
+    let offset = Number(getoffset.value);
+    let MensagemEncriptada = cipher.decode(offset, mensagemEntrada);
     getresultado.innerHTML = MensagemEncriptada;
 });
