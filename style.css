@@ -82,9 +82,10 @@ button {
    border-radius: 2.5px;
    background-color: #6bc3e7; 
    color: #010d1d;
-   padding: 0.6em 3.5em;
+   padding: 0.5em 3.3em;
    font-family: 'Didact Gothic', sans-serif;
    font-size: 1.1em;
+   margin-right: 15px;
    }
 
 button:hover {
