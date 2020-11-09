@@ -1,4 +1,6 @@
+const alfabeto = 26;
 const cipher = {
+    
     encode: function (offset, mensagemEntrada) {
         let finalMessage = "";
 
@@ -8,7 +10,6 @@ const cipher = {
             for (const letter of mensagemEntrada) {
                 const letterCharCode = letter.charCodeAt();
                 const letterRealNumber = letterCharCode - 65;
-                const alfabeto = 26;
                 const newLetterCharCode = ((letterRealNumber + offset) % alfabeto) + 65;
                 const MensagemEncriptada = String.fromCharCode(newLetterCharCode);
                 finalMessage += MensagemEncriptada;
@@ -26,8 +27,7 @@ const cipher = {
         } else {
             for (const letter of mensagemEntrada) {
                 const letterCharCode = letter.charCodeAt();
-                const letterRealNumber = letterCharCode + 65;
-                const alfabeto = 26;
+                const letterRealNumber = letterCharCode + 65;               
                 const newLetterCharCode = ((letterRealNumber - offset) % alfabeto) + 65;
                 const MensagemEncriptada = String.fromCharCode(newLetterCharCode);
                 finalMessage =+ MensagemEncriptada;
