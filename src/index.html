@@ -2,66 +2,68 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensagens Criptografadas - Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-    <base href="https://crismantovani.github.io/SAP005-cipher/">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagens Criptografadas - Caesar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
 
 <body class="bg-img">
-    <div id="root">
-        <header>
-            <h1 class="title">Mensagens Criptografadas</h1>
-        </header>
-<main>
-    <section>
+  <div id="root">
+    <header>
+      <h1 class="title">Mensagens Criptografadas</h1>
+    </header>
+    <main>
+      <section>
         <form>
-            <fieldset>
+          <fieldset>
             <div>
-                
-                <p class="texto">Precisa guardar um segredo? <br>
-                Gerar uma senha mais segura?<br><br> 
+
+              <p class="texto">Precisa guardar um segredo? <br>
+                Gerar uma senha mais segura?<br><br>
                 Digite sua mensagem, criptografe e passe o código para quem você quiser que leia. <br>
-                Se recebeu algo, insira o código que recebeu e iremos revelar a mensagem para você.  </p>
-              </div>
-              <div class="container">
-    <label for="mensagemEntrada">Digite sua mensagem
-        <textarea id="mensagemEntrada" type="text"></textarea>
-    </label>
-</div>
+                Se recebeu algo, insira o código que recebeu e iremos revelar a mensagem para você. </p>
+            </div>
+            <div class="container">
+              <label for="mensagemEntrada">Digite sua mensagem
+                <textarea id="mensagemEntrada" type="text"></textarea>
+              </label>
+            </div>
 
-<div class="container">
-    <label for="offset">Código
-        <input id="offset" type="number">
-            </label>
-</div>
+            <div class="container">
+              <label for="offset">Código
+                <input id="offset" type="number">
+              </label>
+            </div>
 
-<div class="container">
-    <button id="botaoEncript" input type="button">Encriptar</button>
-    <button id="botaoDecript" input type="button">Decriptar</button>
-</div>
+            <div class="container">
+              <button id="botaoEncript" input type="button">Encriptar</button>
+              <button id="botaoDecript" input type="button">Decriptar</button>
+            </div>
 
-<div class="container">
-<label for="resultado">Resultado
-    <div id="resultado"></div>
-</label> 
-</div>
+            <div class="container">
+              <label for="resultado">Resultado
+                <div id="resultado"></div>
+              </label>
+            </div>
 
-                </fieldset>
+          </fieldset>
         </form>
-    </section>
+      </section>
 
-</main>
+    </main>
 
-<footer class="footer">
-    <p class="footer-text">Desenvolvido por <a href="https://github.com/crismantovani" target="_blank" rel="noopener noreferrer" title="Cris Mantovani GitHub">Cris Mantovani</a>
-        | <a href="https://www.laboratoria.la/br" target="_blank" rel="noopener noreferrer" title="Laboratoria Brasil"> &#60;Laboratoria BR&#62;</a>
-       </p>
-</footer>
-</div>
+    <footer class="footer">
+      <p class="footer-text">Desenvolvido por <a href="https://github.com/crismantovani" target="_blank"
+          rel="noopener noreferrer" title="Cris Mantovani GitHub">Cris Mantovani</a>
+        | <a href="https://www.laboratoria.la/br" target="_blank" rel="noopener noreferrer" title="Laboratoria Brasil">
+          &#60;Laboratoria BR&#62;</a>
+      </p>
+    </footer>
+  </div>
 
-<script src="index.js" type="module"></script>
+  <script src="index.js" type="module"></script>
 </body>
+
 </html>

@@ -1,40 +1,42 @@
 const alfabeto = 26;
 const cipher = {
-    
-    encode: function (offset, mensagemEntrada) {
-        let finalMessage = "";
 
-        if (!offset || !mensagemEntrada) {
-            throw new TypeError();
-        } else {
-            for (const letter of mensagemEntrada) {
-                let letterCharCode = letter.charCodeAt();
-                let letterRealNumber = letterCharCode - 65;
-                let newLetterCharCode = ((letterRealNumber + offset) % alfabeto) + 65;
-                let MensagemEncriptada = String.fromCharCode(newLetterCharCode);
-                finalMessage += MensagemEncriptada;
-            
-            }
-            return finalMessage;
-        }
-    },
+  encode: function (offset, mensagemEntrada) {
+    let finalMessage = "";
 
-    decode: function (offset, mensagemEntrada) {
-        let finalMessage = "";
+    if (!offset || !mensagemEntrada) {
+      throw new TypeError('Usuário não preencheu corretamente');
+    } else {
+      for (const letra of mensagemEntrada) {
+        let letraCharCode = letra.charCodeAt(0);
+        let letraNumero = letraCharCode - 65;
+        let novaLetraCharCode = ((letraNumero + offset) % alfabeto) + 65;
+        let MensagemEncriptada = String.fromCharCode(novaLetraCharCode);
+        finalMessage += MensagemEncriptada;
 
-        if (!offset || !mensagemEntrada) {
-            throw new TypeError();
-        } else {
-            for (const letter of mensagemEntrada) {
-                let letterCharCode = letter.charCodeAt();
-                let letterRealNumber = letterCharCode + 65;               
-                let newLetterCharCode = ((letterRealNumber - offset) % alfabeto) + 65;
-                let MensagemEncriptada = String.fromCharCode(newLetterCharCode);
-                finalMessage =+ MensagemEncriptada;
-                
-            }
-        }
-            return finalMessage;
-        }
-    };
+      }
+      return finalMessage;
+    }
+  },
+
+  decode: function (offset, mensagemEntrada) {
+    let finalMessage = "";
+
+    if (!offset || !mensagemEntrada) {
+      throw new TypeError('Usuário não preencheu corretamente');
+    } else {
+      for (const letra of mensagemEntrada) {
+        let letraCharCode = letra.charCodeAt(0);
+        let letraNumero = letraCharCode + 65;
+        let novaLetraCharCode = ((letraNumero - offset) % alfabeto) + 65;
+        let MensagemEncriptada = String.fromCharCode(novaLetraCharCode);
+        console.log('MensagemEncriptada')
+        finalMessage += MensagemEncriptada;
+
+      }
+      return finalMessage;
+    }
+
+  }
+};
 export default cipher;
