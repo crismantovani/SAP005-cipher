@@ -13,19 +13,20 @@ const botaoDecript = document.getElementById('botaoDecript');
 //Botão Encriptar
 
 botaoEncript.addEventListener('click', event => {
-    event.preventDefault();
-    let mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
-    let offset = Number(getoffset.value);
-    let MensagemEncriptada = cipher.encode(offset, mensagemEntrada);
-    getresultado.innerHTML = MensagemEncriptada;
+  event.preventDefault();
+  let mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
+  let offset = Number(getoffset.value);
+  let MensagemEncriptada = cipher.encode(offset, mensagemEntrada);
+  getresultado.innerHTML = MensagemEncriptada;
+
 });
 
 //Botão de Desencriptar
 
 botaoDecript.addEventListener('click', event => {
-    event.preventDefault();
-    let mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
-    let offset = Number(getoffset.value);
-    let MensagemEncriptada = cipher.decode(offset, mensagemEntrada);
-    getresultado.innerHTML = MensagemEncriptada;
+  event.preventDefault();
+  let mensagemEntrada = String(getmensagemEntrada.value).toUpperCase();
+  let offset = Number(getoffset.value);
+  let MensagemEncriptada = cipher.decode(offset, mensagemEntrada);
+  getresultado.innerHTML = MensagemEncriptada;
 });
